@@ -8,11 +8,12 @@ export const mutations = {
   }
 };
 export const actions = {
-  posts(context,posts) {
-    context.commit("posts", posts);
+  async getPage(context, id) {
+    const page = await this.$axios.$get('/wp-json/wp/v2/posts/'+id);
   },
   async nuxtServerInit({commit}) {
-    const posts = await this.$axios.$get('/wp-json/wp/v2/posts');
+    const posts = await this.$axios.$get('/wp-json/wp/v2/pages?orderby=menu_order&order=asc');
+    console.log(posts);
     commit('posts',posts);
   }
 };
