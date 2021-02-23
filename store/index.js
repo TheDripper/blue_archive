@@ -1,3 +1,4 @@
+import pages from "~/static/pages.json"
 export const state = () => ({
   posts: []
 });
@@ -12,8 +13,8 @@ export const actions = {
     const page = await this.$axios.$get('/wp-json/wp/v2/posts/'+id);
   },
   async nuxtServerInit({commit}) {
-    const posts = await this.$axios.$get('/wp-json/wp/v2/pages?orderby=menu_order&order=asc');
-    console.log(posts);
-    commit('posts',posts);
+    // const posts = await this.$axios.$get('/wp-json/wp/v2/pages?orderby=menu_order&order=asc');
+    // console.log(posts);
+    commit('posts',pages);
   }
 };

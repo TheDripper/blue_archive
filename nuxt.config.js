@@ -33,14 +33,19 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '~/modules/pages-json.js'
   ],
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
   ],
   proxy: {
+    // '/wp-json': 'https://79d801e6b0b6.ngrok.io'
     '/wp-json': 'http://deadcustomer.local'
     },
+    // serverMiddleware: [
+    //   { path: "/server-middleware", handler: "~/server-middleware/rest.js" },
+    // ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
