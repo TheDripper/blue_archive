@@ -31,9 +31,9 @@ body {
 }
 .post {
   overflow: hidden;
-  width: 400px;
+  width: 33vw;
   video {
-    height: 400px !important;
+    height: 33vw !important;
     max-width: none !important;
   }
 }
@@ -54,13 +54,7 @@ body {
   }
 }
 
-#root {
-  width: 100vw;
-  height: 100vh;
-}
 #tiles {
-  width: 1200px;
-  height: 1200px;
   @apply flex flex-wrap;
 }
 </style>
