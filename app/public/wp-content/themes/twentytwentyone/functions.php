@@ -640,7 +640,7 @@ function filter_the_content_in_the_main_loop( $content ) {
  
     // Check if we're inside the main loop in a single Post.
     if ( is_singular() && in_the_loop() && is_main_query() ) {
-        return str_replace('http://deadcustomer.local/wp-content/uploads/2021/02/','',$content);
+        return str_replace('http://deadcustomer.local/wp-content/uploads/2021/02/','/',$content);
     }
  
     return $content;
